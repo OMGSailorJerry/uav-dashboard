@@ -3,7 +3,7 @@
  * TODO: Replace with real API calls to backend service
  */
 
-import { Drone, Mission, Alert, Checkpoint } from '@/domain/types';
+import { Drone, Mission, Alert, Checkpoint, User } from '@/domain/types';
 
 // Kyiv, Ukraine area coordinates (lat ~50.45, lng ~30.52)
 export const mockDrones: Drone[] = [
@@ -118,6 +118,12 @@ export const mockMissions: Mission[] = [
     checkpoints: createCheckpoints(3, 50.4789, 30.5445, Date.now() - 5 * 60 * 60 * 1000, 3),
     createdBy: 'user-coordinator-1',
   },
+];
+
+export const mockOperators: User[] = [
+  { id: 'user-operator-1', role: 'operator', name: 'Alex Marchenko' },
+  { id: 'user-operator-2', role: 'operator', name: 'Olena Kovalenko' },
+  { id: 'user-operator-3', role: 'operator', name: 'Dmytro Shevchenko' },
 ];
 
 export const mockAlerts: Alert[] = [
